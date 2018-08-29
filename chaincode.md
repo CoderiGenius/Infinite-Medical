@@ -47,3 +47,21 @@ fabric-cli命令举例：
 ```
 
 #### getTransform 被转诊医院获取
+
+需要参数数量：6个
+
+参数对应：方法名，患者key，患者密码，医院2的ID，医院2的公钥,需要解密的数据
+
+返回内容：data
+
+
+fabric-cli命令举例：
+
+```
+ FABRIC_CFG_PATH=./sampleconfig peer chaincode invoke -v 0 -c '{"Args":["transform","1:h1:y1","key","h2"]}' -o 127.0.0.1:7050 -C test1 -n mycc
+```
+
+#### 打包chaincode
+```
+FABRIC_CFG_PATH=./sampleconfig peer chaincode package -n mycc4 -p github.com/hyperledger/fabric/examples/chaincode/go/madical -v 0 -s -S -i "OR ('secMSP.member')" ccpack.out
+```
