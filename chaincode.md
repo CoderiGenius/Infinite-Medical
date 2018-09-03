@@ -19,7 +19,7 @@ FABRIC_CFG_PATH=./sampleconfig peer chaincode instantiate -v 0 -c '{"Args":["ini
 #### signin 患者挂号
 需要参数数量：5个
 
-参数对应：方法名患者ID，医院ID，患者科室，患者本次挂号的uuid，挂号医院公钥
+参数对应：方法名，患者ID，医院ID，患者科室，患者密码
 
 返回内容：json
 
@@ -48,9 +48,9 @@ fabric-cli命令举例：
 
 #### getTransform 被转诊医院获取
 
-需要参数数量：6个
+需要参数数量：5个
 
-参数对应：方法名，患者key，患者密码，医院2的ID，医院2的公钥,需要解密的数据
+参数对应：方法名，患者key，患者密码，医院2的ID,需要解密的数据
 
 返回内容：data
 
