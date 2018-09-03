@@ -24,7 +24,7 @@ FABRIC_CFG_PATH=./sampleconfig peer chaincode instantiate -v 0 -c '{"Args":["ini
 返回内容：json
 
 ```
-{"publicKey":"公钥"，"info":"患者密码"}
+{"patientKey":"患者于区块链中的密码"，"info":"备注"}
 ```
 
 fabric-cli命令举例：
